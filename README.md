@@ -1,2 +1,2 @@
 # Some-Aacademic-Coding-Stuff
-These are some of the codes done as a part of under graduation
+# The file name gives what the code is for
