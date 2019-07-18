@@ -1,0 +1,45 @@
+1. sudo apt-get install xinetd telnetd
+
+2. sudo gedit /etc/inetd.conf
+
+Copy content:
+telnet stream tcp nowit telnetd /usr/sbin/tcpd /usr/sbin/in.telnetd
+
+3. sudo gedit /etc/xinetd.conf
+(if not install gedit then sudo apt install gedit)
+
+Copy content:
+# Simple configuration file for xinetd
+#
+# Some defaults, and include /etc/xinetd.d/
+defaults
+{
+# Please note that you need a log_type line to be able to use log_on_success
+# and log_on_failure. The default is the following :
+# log_type = SYSLOG daemon info
+instances = 60
+log_type = SYSLOG authpriv
+log_on_success = HOST PID
+log_on_failure = HOST
+cps = 25 30
+}
+
+4. sudo /etc/init.d/xinetd restart
+
+5.
+HOST:
+ifconfig (for get IP)
+ls
+sudo gedit abc
+ls
+
+
+client:
+telnet 192.168.0.109(HOST IP)
+HOST NAME
+HOST PASS
+ls
+ls
+
+
+

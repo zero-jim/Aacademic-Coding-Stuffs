@@ -1,0 +1,27 @@
+1. sudo apt-get update
+
+2. sudo apt-get install vsftpd
+
+3. sudo gedit /etc/vsftpd.conf
+
+Make sure about the following:
+anonymous_enable=YES
+local_enable=YES
+write_enable=YES
+
+4. sudo service vsftpd restart
+
+5.
+HOST:
+ifconfig (for get IP)
+ls
+sudo gedit abc
+ls
+ls
+
+client:
+ftp 192.168.0.109(HOST IP)
+HOST NAME
+HOST PASS
+get abc(abc=File name HOST)
+put abb(abb=File name of Client)

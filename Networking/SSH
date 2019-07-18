@@ -1,0 +1,34 @@
+1. sudo apt install openssh-server
+
+2. service ssh start
+
+3. service ssh status
+
+4. Accessing Only File:
+HOST:
+ifconfig (for get IP)
+ls
+sudo gedit abc
+ls
+ls
+
+Client:
+Accessing Only File:
+
+ssh sadi@192.168.1.11(HOST IP)
+yes
+HOST PASS
+ls
+scp nano.save mrbepari@192.168.1.8:~/Desktop/nano.save
+Client PASS
+
+(scp File_Name Client_Name@Client_IP:~/Desktop/File_Name)
+
+
+Accessing File And GUI Soft:
+ssh -X sadi@192.168.1.11(HOST IP)
+
+SeePerformance:
+
+sudo apt install htop
+htop
