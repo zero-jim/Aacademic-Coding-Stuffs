@@ -1,0 +1,15 @@
+int main()
+{
+
+int a=10;
+b=20;
+c;
+c=0;
+c+=a+b;
+a++;
+b--
+cout<<a;
+return 0;
+
+
+}

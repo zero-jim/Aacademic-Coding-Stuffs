@@ -1,0 +1,57 @@
+drop table student;
+
+create table student(s_id number not null,s_name varchar(10) not null,
+ady number,dept varchar(7),faculty varchar(10),
+gpa number(3,2),city varchar(20),
+dorm varchar(15), lvl number, sem varchar(3),primary key (s_id));
+
+insert into student
+values(1402048,'Jim',2014,'CSE','CSE',3.50,'Rajshahi','Zia Hall',3,'I');
+
+insert into student
+values(1402020,'Towmony',2014,'CSE','CSE',3.60,'Rangpur','Sufia Kamal',3,'I');
+
+insert into student
+values(1402008,'Sadi',2014,'CSE','CSE',3.80,'Jashore','Zia Hall',3,'I');
+
+insert into student
+values(1402022,'Porshia',2014,'CSE','CSE',3.78,'Bogra','Begum Rokeya',3,'I');
+
+insert into student
+values(1402242,'Abir',2014,'CSE','CSE',3.15,'Rajshahi','Zia Hall',3,'I');
+
+insert into student
+values(1502048,'Rony',2015,'EEE','CSE',3.69,'Rajshahi','Shaikh Rashel',2,'II');
+
+insert into student
+values(1602128,'Sakib',2016,'ECE','CSE',3.65,'Dhaka','Zia Hall',2,'I');
+
+insert into student
+values(1102022,'Harun',2011,'CSE','CSE',2.35,'Rajshahi','Tazuddin Hall',4,'II');
+
+insert into student
+values(1202018,'Sarif',2012,'CSE','CSE',2.49,'Dinajpur','Zia Hall',4,'II');
+
+insert into student
+values(1302220,'Partho',2013,'EEE','CSE',2.29,'Rajshahi','Zia Hall',4,'I');
+
+/*show table*/
+select * from student;
+
+/*names with m as fourth letter*/
+select s_name from student where s_name like '___m%' order by s_name; 
+
+/*gpa above 3.5 and admitter previous year*/
+select s_id, s_name, gpa from student where gpa>3.5 and ady=2015;
+
+/*all students in range 3.0 to 3.5*/
+select s_id,s_name,gpa from student where gpa>=3.00 and gpa<=3.50;
+
+/*max gpa from each dept*/
+select s_id,s_name,dept,gpa from student s1 where
+gpa=(select max(gpa) from student s2 where s1.dept=s2.dept);
+
+/*names and city of student in level 3 dept cse*/
+select s_name,city from student where lvl=3 and dept='CSE' order by s_name;
+delete from student where gpa<2.5;
+select*from student;

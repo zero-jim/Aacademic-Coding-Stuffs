@@ -1,0 +1,15 @@
+predicates
+   printout(string)
+   go
+clauses
+   go:-
+     clearwindow,
+	 Z="HSTU",printout(Z),
+   go.	 
+   printout(Z):-
+      str_len(Z,N),
+	  N>0,
+	  write(Z),nl,
+	  frontchar(Z,F,REM),
+	  printout(REM),
+	  write(F).

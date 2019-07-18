@@ -1,0 +1,11 @@
+int main()
+{
+int a,a_sum,b;
+a=10,b=20;
+a_sum=a+b+i;
+cout<<a_sum;
+
+return 0;
+
+
+}

@@ -1,0 +1,11 @@
+predicates
+go
+clauses
+go:-
+clearwindow,
+readint(X),
+readint(Y),
+Z=X+Y,
+W=X-Y,
+WRITE("sum=",Z),nl,
+write("dif=",W),nl.

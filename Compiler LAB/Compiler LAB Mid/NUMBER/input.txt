@@ -1,0 +1,7 @@
+int main()
+{
+int a=20,-30;
+int a3=a+b;
+cout<<a3;
+
+}

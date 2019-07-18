@@ -1,0 +1,15 @@
+predicates
+go
+clauses
+go:-
+clearwindow,
+readint(X),
+readint(Y),
+Z=X+Y,
+A=X-Y,
+B=X*Y,
+C=X/Y,
+write("sum=",Z),nl,
+write("sub=",A),nl,
+write("mul=",B),nl,
+write("div=",C),nl.

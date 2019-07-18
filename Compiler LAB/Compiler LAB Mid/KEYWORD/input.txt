@@ -1,0 +1,8 @@
+int main()
+{
+int a,sum=0;
+float b;
+for(i=0;i<=7;i++)
+frintf("%D");
+
+}
