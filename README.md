@@ -7,7 +7,7 @@
 - Computer Graphics
 - Databases
 - Data Structures
-- Algorithms
+- Networking
 - Microprocessors
 - OS
 - VLSI
